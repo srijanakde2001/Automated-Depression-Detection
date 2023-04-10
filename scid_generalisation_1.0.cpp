@@ -132,21 +132,23 @@ Implement questions as graphs as well.
 */
 int main() {
     string ans, out[10];
-    cout<<"For diagnosing depression, we use SCID-5-CV as default. Do you wish to change the rules? (Y/N)";
+    cout<<"\nFor diagnosing depression, we use SCID-5-CV as default. Do you wish to change the rules? (Y/N)";
     cin>>ans;
-    if(ans=="n")
+    if(ans=="No" || ans=="NO" || ans=="N" || ans=="n")
     {
         int result = system("scid_baseline.exe");
         return 0;
     }
+    cout<<"\nDo you wish to change the output categories? (Y/N)";
+    cin>>ans;
     int n_out;
     if(ans=="Yes" || ans=="YES" || ans=="Y" || ans=="y")
     {
-        cout<<"Enter the number of output categories:";
+        cout<<"\nEnter the number of output categories:";
         cin>>n_out;
         f0r(i, n_out)
         {
-            cout<<"Enter diagnosis for output class "<<i+1<<" :";
+            cout<<"\nEnter diagnosis for output class "<<i+1<<" :";
             cin>>out[i];
         }
     }
@@ -159,7 +161,7 @@ int main() {
         out[3] = "Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!";
     }
     int n, m;
-    cout<<"Enter the number of nodes and edges:";
+    cout<<"\nEnter the number of nodes and edges:";
     cin >> n >> m;
     cout<<"Enter the node numbers (starting from 1) which are connected in groups of two separated by a new line. E.g.- 1 2\n2 3\n";
     for(int i = 0; i < m; ++i) {
@@ -216,7 +218,7 @@ int main() {
         {
             if(flag==0)
             {   
-                cout<<out[(rules[k][j-1]-'0')];
+                cout<<endl<<out[(rules[k][j-1]-'0')];
                 return 0; 
             }
             else
@@ -231,7 +233,7 @@ int main() {
     Note: By default count greater than 5 leads to last output label.
     */
     if(cnt>5)
-        cout<<out[n_out-1];
+        cout<<endl<<out[n_out-1];
     return 0;
 
 }
