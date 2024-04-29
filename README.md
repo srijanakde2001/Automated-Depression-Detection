@@ -13,5 +13,7 @@ DDBERT has code for BERT based text analysis of DAIC dataset for depression dete
 ![oldbs](https://github.com/srijanakde2001/Automated-Depression-Detection/assets/54339186/871725ce-4651-4797-890a-ba81a742b380)
 
 The aim was to create a multi-modal depression detection model that incorporates all transcript, audio and video data of patients that lead to a PHQ8-binary depression score prediction. The following model pipeline was created.
+![image](https://github.com/srijanakde2001/Automated-Depression-Detection/assets/54339186/6d3a9608-25dd-44b8-91b3-c0be9af04505)
+
 
 Note: The project was done as part of my CSE BTech+MTech degree project at IIT Kharagpur under the guidance of Professor Partha Pratim Chakraborty, Professor Aritra Hazra and Professor Rajlakshmi Guha.
